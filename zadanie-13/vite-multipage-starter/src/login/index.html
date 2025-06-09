@@ -1,12 +1,23 @@
 <!doctype html>
-<html lang="en">
+<html lang="pl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Logowanie</title>
     <link rel="stylesheet" href="/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   </head>
   <body>
+    <h1 class = "title"> Logowanie </h1>
+    <form id = "login-form" class = "form">
+      <label for="email" class ="label">Email:</label>
+      <input id ="email" type="email" required class = "input"/>
+
+      <label for="password" class="label">Hasło:</label>
+      <input id="password" type="password" required class = "input"/>
+
+      <button type = "submit" class = "btn"> Zaloguj się </button>
+    </form>
     <div id="app">
       <a href="/">Home</a>
     </div>
