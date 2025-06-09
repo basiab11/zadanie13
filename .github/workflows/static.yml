@@ -34,16 +34,13 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - uses: actions/setup-node@v4
-      - name: Install dependencies
-        run: npm install
-        working-directory: zadanie-13
-
+      - run: npm install
       - run: npm run build -- --base=/zadanie13
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
-          path: '.'
+          path: 'dist'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
