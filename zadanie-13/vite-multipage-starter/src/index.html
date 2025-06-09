@@ -1,12 +1,38 @@
 <!doctype html>
-<html lang="en">
+<html lang="pl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
     <link rel="stylesheet" href="/style.css">
+    <script type="module" src="./main.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/supabase.min.js"></script>
+  </head>
   </head>
   <body>
+    <h1> BLOG </h1>
+    <main id = "articles-list">
+      <h2> Artykuły: </h2>
+
+    </main>
+    <button id="add-article-btn">
+      Dodaj artykuł
+    </button>
+    <button id="logout-btn">
+      Wyloguj
+    </button>
+
+    <div id ="article-modal" class ="hidden">
+      <form id ="article-form">
+        <input type = "hidden" id ="article-id"/>
+        <label>Tytuł:<input id ="article-title" required/></label>
+        <label> Podtytuł: <input id="article-subtitle" required/></label>
+        <label>Treść:<textarea id="article-content" required></textarea></label>
+        <label>Autor:<input id="article-author" required/></label>
+        <button type="submit">Zapisz</button>
+        <button type ="button" id="modal-close-btn">Anuluj</button>
+      </form>
+    </div>
     <div id="app">
       <a href="/login/">Login</a>
     </div>
